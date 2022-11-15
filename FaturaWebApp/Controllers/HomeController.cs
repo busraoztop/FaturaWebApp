@@ -19,6 +19,23 @@ namespace FaturaWebApp.Controllers
             var faturalar = DbContex.VeriOku();
 
             //aldıgım modeli view gönderiyorum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             return View(faturalar);
         }
 
