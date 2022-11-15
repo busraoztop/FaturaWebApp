@@ -15,12 +15,11 @@ namespace FaturaWebApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
+            //veri tabanından fatura listesi modeli ile verileri alıyorum
+            var faturalar = DbContex.VeriOku();
 
-        public IActionResult Privacy()
-        {
-            return View();
+            //aldıgım modeli view gönderiyorum
+            return View(faturalar);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
