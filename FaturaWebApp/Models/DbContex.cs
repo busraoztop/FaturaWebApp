@@ -4,7 +4,11 @@ namespace FaturaWebApp.Models
 {
     public static class DbContex
     {
-        public static List<Fatura> VeriOku()
+        /// <summary>
+        /// Veritabanından fatura listesi getirilir
+        /// </summary>
+        /// <returns></returns>
+        public static List<Fatura> FaturaListesi()
         {
 
 

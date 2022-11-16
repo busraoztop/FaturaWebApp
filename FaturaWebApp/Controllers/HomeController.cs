@@ -16,7 +16,7 @@ namespace FaturaWebApp.Controllers
         public IActionResult Index()
         {
             //veri tabanından fatura listesi modeli ile verileri alıyorum
-            var faturalar = DbContex.VeriOku();
+            var faturalar = DbContex.FaturaListesi();
 
             //aldıgım modeli view gönderiyorum
             return View(faturalar);
