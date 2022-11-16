@@ -21,7 +21,7 @@ namespace FaturaWebApp.Models
 
                 var command = connection.CreateCommand();
                 command.CommandText =
-                @" SELECT FaturaNo, FaturaTarihi FROM Faturalar ";
+                @" SELECT FaturaNo, FaturaTarihi, FaturaDurumu FROM Faturalar ";
                 
 
                 using (var reader = command.ExecuteReader())
@@ -30,8 +30,9 @@ namespace FaturaWebApp.Models
                     {
                         var faturaNo = reader.GetString(0);
                         var faturaTarihi = reader.GetString(1);
-                       
-                        faturalar.Add(new Fatura {FaturaNo= faturaNo,FaturaTarihi= faturaTarihi });
+                        var faturaDurumu = reader.GetString(2);
+                        
+                        faturalar.Add(new Fatura {FaturaNo= faturaNo,FaturaTarihi= faturaTarihi,FaturaDurumu=faturaDurumu});
                     }
 
                     connection.Close();
